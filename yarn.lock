@@ -660,6 +660,11 @@ telegraf@^4.10.0:
     sandwich-stream "^2.0.2"
     typegram "^3.11.0"
 
+telegram-keyboard@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/telegram-keyboard/-/telegram-keyboard-2.3.2.tgz#310e0b500d93b6478f816e1e4002ebf9020ab9ca"
+  integrity sha512-Ngl580+n+wREeaxdVOyHGm1cU3TeNBMXjsvxA4XmJ2Gik7eNIsMyzfEUNMflnBZH0F+iMxV3iH5ZwMrFHQIIwg==
+
 to-regex-range@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/to-regex-range/-/to-regex-range-5.0.1.tgz#1648c44aae7c8d988a326018ed72f5b4dd0392e4"

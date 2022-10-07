@@ -1,7 +1,7 @@
-import Markup from 'telegraf/markup';
+import { Keyboard } from 'telegram-keyboard';
 
-export function showKeybord() {
-  return Markup.keyboard([
-      ['Get a new topic'],
-  ]).extra().resize();
-};
+export const showKeybord = () => {
+  return Keyboard.reply([
+    ['Get a new topic']
+  ]);
+}
