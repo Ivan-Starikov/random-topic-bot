@@ -8,8 +8,9 @@ dotenv.config();
 
 const app = express();
 const bot = new Telegraf(process.env.BOT_TOKEN);
+const PORT = process.env.PORT || 3000;
 
-app.get('/', (res) => {
+app.get('/', (req, res) => {
   res.send('The bot is running')
 })
 
@@ -27,5 +28,5 @@ bot.start(ctx => {
 
 bot.launch();
 
-app.listen(process.env.PORT, () => console.log(`Server is running on port ${process.env.PORT}`))
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`))
 

@@ -10,7 +10,10 @@
     "telegraf": "^4.10.0"
   },
   "scripts": {
-    "server": "nodemon app.js"
+    "start": "nodemon app.js"
+  },
+  "engines": {
+    "node": "16.15.1"
   },
   "type": "module"
 }
