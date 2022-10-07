@@ -1,0 +1,2 @@
+export const PORT = 3000;
+export const TOKEN = '5731396703:AAEI2-GJ92NrU06yUQEaWm0jH6nBEbN3k98';
