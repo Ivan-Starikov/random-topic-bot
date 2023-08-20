@@ -11,7 +11,8 @@
     "telegram-keyboard": "^2.3.2"
   },
   "scripts": {
-    "server": "nodemon app.js"
+    "server": "nodemon app.js",
+    "build": "node app.js"
   },
   "type": "module"
 }
