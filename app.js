@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
-app.get("/", (res) => {
+app.get("/", (req, res) => {
   res.send("The bot is running");
 });
 

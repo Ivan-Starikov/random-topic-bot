@@ -14,5 +14,8 @@
     "server": "nodemon app.js",
     "build": "node app.js"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@types/express": "^4.17.21"
+  }
 }
