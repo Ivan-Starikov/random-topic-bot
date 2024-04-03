@@ -1,7 +1,7 @@
 import express from "express";
 import * as dotenv from "dotenv";
 import { Telegraf } from "telegraf";
-import { getRandomTopic } from "./topics.js";
+import { getQuestion } from "./question.js";
 import { showKeybord } from "./keyboards.js";
 
 dotenv.config();
@@ -13,12 +13,9 @@ app.get("/", (req, res) => {
   res.send("The bot is running");
 });
 
-bot.hears("Get a new topic", (ctx) => {
-  ctx.reply(getRandomTopic());
-});
-
-bot.hears("Delete a topic", (ctx) => {
-  ctx.reply("Delete");
+bot.hears("Новая тема", async (ctx) => {
+  const data = await getQuestion();
+  await ctx.reply(String(data));
 });
 
 bot.start((ctx) => {
