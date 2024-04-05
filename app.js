@@ -5,17 +5,22 @@ import { getQuestion } from "./question.js";
 import { showKeybord } from "./keyboards.js";
 
 dotenv.config();
-
 const app = express();
-const bot = new Telegraf(process.env.BOT_TOKEN);
+const bot = new Telegraf(
+  process.env.NODE_ENV === "dev"
+    ? process.env.DEV_BOT_TOKEN
+    : process.env.BOT_TOKEN,
+);
+
+let currentWord;
 
 app.get("/", (req, res) => {
   res.send("The bot is running");
 });
 
 bot.hears("Новая тема", async (ctx) => {
-  const data = await getQuestion();
-  await ctx.reply(String(data));
+  currentWord = await getQuestion();
+  await ctx.reply(String(currentWord));
 });
 
 bot.start((ctx) => {
